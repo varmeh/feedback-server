@@ -1,8 +1,10 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+require('./services/passport')
 
-app.get('/', (req, res) => {
-    res.send({ hi: 'there' })
-})
+// Fetch routes
+const googleAuth = require('./routes/routeGoogleAuthentication')
 
-app.listen(process.env.PORT || 5000)
+const app = express();
+googleAuth(app);
+
+app.listen(process.env.PORT || 5000);
