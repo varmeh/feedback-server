@@ -4,9 +4,12 @@ import { connect } from 'react-redux'
 
 import { fetchUser } from '../redux/actions'
 
-import Header from './Header'
+import {
+    Header,
+    Landing
+} from '../components'
+
 const Dashboard = () => <h2>Dashboard</h2>
-const Landing = () => <h2>Landing</h2>
 
 class App extends Component {
     componentDidMount() {
