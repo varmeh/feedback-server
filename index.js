@@ -14,7 +14,7 @@ const app = express();
 app.use(
     cookieSession({
         maxAge: 30 * 24 * 60 * 60 * 1000,               // 30 days in ms
-        keys: [keys.cookieKey, keys.cookieKey2]         // More than 1 key could be provided to provide additional layer of security
+        keys: [keys.cookieKey1, keys.cookieKey2]         // More than 1 key could be provided to provide additional layer of security
     })
 )
 
